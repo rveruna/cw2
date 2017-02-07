@@ -24,6 +24,22 @@ $('.main_h li a').click(function() {
     }
 });
 
+// Mobile Navigation Pages
+$('.mobile-toggle').click(function() {
+    if ($('.pages').hasClass('open-nav')) {
+        $('.pages').removeClass('open-nav');
+    } else {
+        $('.pages').addClass('open-nav');
+    }
+});
+
+$('.main_h li a').click(function() {
+    if ($('.pages').hasClass('open-nav')) {
+        $('.navigation').removeClass('open-nav');
+        $('.pages').removeClass('open-nav');
+    }
+});
+
 // navigation scroll lijepo radi materem
 $('nav a').click(function(event) {
     var id = $(this).attr("href");
